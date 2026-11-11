@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1190" viewBox="0 0 1500 1190" font-family="Arial, sans-serif">
+<defs>
+<marker id="open" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L11,6 L1,11" fill="none" stroke="#222" stroke-width="1.5"/></marker>
+<marker id="tri" markerWidth="16" markerHeight="16" refX="15" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,1 L15,8 L1,15 Z" fill="#fff" stroke="#222" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1500" height="1190" fill="#fff"/>
+<rect x="235" y="30" width="1030" height="1110" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="750" y="62" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">Library Management System</text>
+<line x1="200.0" y1="110.0" x2="200.0" y2="670.0" stroke="#222" stroke-width="1.5"/>
+<line x1="112.0" y1="430.0" x2="200.0" y2="430.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="110.0" x2="628.0" y2="110.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="190.0" x2="278.0" y2="190.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="270.0" x2="278.0" y2="270.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="350.0" x2="278.0" y2="350.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="430.0" x2="278.0" y2="430.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="510.0" x2="278.0" y2="510.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="590.0" x2="278.0" y2="590.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="670.0" x2="278.0" y2="670.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="110.0" x2="1330.0" y2="910.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1388.0" y1="530.0" x2="1330.0" y2="530.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="110.0" x2="872.0" y2="110.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="190.0" x2="1222.0" y2="190.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="350.0" x2="1222.0" y2="350.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="510.0" x2="1222.0" y2="510.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="670.0" x2="1222.0" y2="670.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="750.0" x2="1222.0" y2="750.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="830.0" x2="1222.0" y2="830.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="910.0" x2="1222.0" y2="910.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="990.0" x2="1330.0" y2="1070.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1388.0" y1="1000.0" x2="1330.0" y2="1000.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="990.0" x2="1222.0" y2="990.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1330.0" y1="1070.0" x2="1222.0" y2="1070.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="750.0" x2="200.0" y2="830.0" stroke="#222" stroke-width="1.5"/>
+<line x1="112.0" y1="810.0" x2="200.0" y2="810.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="750.0" x2="622.0" y2="750.0" stroke="#222" stroke-width="1.5"/>
+<line x1="200.0" y1="830.0" x2="628.0" y2="830.0" stroke="#222" stroke-width="1.5"/>
+<line x1="1410.0" y1="958.0" x2="1410.0" y2="628.0" stroke="#222" stroke-width="1.5" marker-end="url(#tri)"/>
+<line x1="628.0" y1="270.0" x2="522.0" y2="270.0" stroke="#222" stroke-width="1.5" stroke-dasharray="8,5" marker-end="url(#open)"/>
+<line x1="1042.2" y1="323.6" x2="807.8" y2="216.4" stroke="#222" stroke-width="1.5" stroke-dasharray="8,5" marker-end="url(#open)"/>
+<line x1="978.0" y1="350.0" x2="872.0" y2="350.0" stroke="#222" stroke-width="1.5" stroke-dasharray="8,5" marker-end="url(#open)"/>
+<line x1="522.0" y1="350.0" x2="628.0" y2="350.0" stroke="#222" stroke-width="1.5" stroke-dasharray="8,5" marker-end="url(#open)"/>
+<line x1="872.0" y1="670.0" x2="978.0" y2="670.0" stroke="#222" stroke-width="1.5" stroke-dasharray="8,5" marker-end="url(#open)"/>
+<line x1="841.6" y1="729.1" x2="1010.6" y2="690.4" stroke="#222" stroke-width="1.5" stroke-dasharray="8,5" marker-end="url(#open)"/>
+<line x1="872.0" y1="830.0" x2="978.0" y2="830.0" stroke="#222" stroke-width="1.5" stroke-dasharray="8,5" marker-end="url(#open)"/>
+<line x1="839.4" y1="450.4" x2="1010.6" y2="489.6" stroke="#222" stroke-width="1.5" marker-end="url(#tri)"/>
+<line x1="872.0" y1="510.0" x2="978.0" y2="510.0" stroke="#222" stroke-width="1.5" marker-end="url(#tri)"/>
+<line x1="839.4" y1="569.6" x2="1010.6" y2="530.4" stroke="#222" stroke-width="1.5" marker-end="url(#tri)"/>
+<rect x="539.0" y="260.0" width="72" height="20" fill="#fff"/>
+<text x="575.0" y="275.0" text-anchor="middle" font-size="16" fill="#222">«extend»</text>
+<rect x="885.0" y="260.0" width="80" height="20" fill="#fff"/>
+<text x="925.0" y="275.0" text-anchor="middle" font-size="16" fill="#222">«include»</text>
+<rect x="885.0" y="340.0" width="80" height="20" fill="#fff"/>
+<text x="925.0" y="355.0" text-anchor="middle" font-size="16" fill="#222">«include»</text>
+<rect x="535.0" y="340.0" width="80" height="20" fill="#fff"/>
+<text x="575.0" y="355.0" text-anchor="middle" font-size="16" fill="#222">«include»</text>
+<rect x="889.0" y="660.0" width="72" height="20" fill="#fff"/>
+<text x="925.0" y="675.0" text-anchor="middle" font-size="16" fill="#222">«extend»</text>
+<rect x="890.1" y="699.7" width="72" height="20" fill="#fff"/>
+<text x="926.1" y="714.7" text-anchor="middle" font-size="16" fill="#222">«extend»</text>
+<rect x="889.0" y="820.0" width="72" height="20" fill="#fff"/>
+<text x="925.0" y="835.0" text-anchor="middle" font-size="16" fill="#222">«extend»</text>
+<ellipse cx="400" cy="190" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="400" y="195" text-anchor="middle" font-size="18" fill="#222">Register Account</text>
+<ellipse cx="750" cy="110" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="115" text-anchor="middle" font-size="18" fill="#222">Log In</text>
+<ellipse cx="400" cy="270" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="400" y="275" text-anchor="middle" font-size="18" fill="#222">Search Books</text>
+<ellipse cx="750" cy="270" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="275" text-anchor="middle" font-size="18" fill="#222">View Book Details</text>
+<ellipse cx="400" cy="350" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="400" y="355" text-anchor="middle" font-size="18" fill="#222">Reserve Book</text>
+<ellipse cx="400" cy="430" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="400" y="435" text-anchor="middle" font-size="18" fill="#222">Cancel Reservation</text>
+<ellipse cx="400" cy="510" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="400" y="515" text-anchor="middle" font-size="18" fill="#222">View Active Loans</text>
+<ellipse cx="400" cy="590" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="400" y="595" text-anchor="middle" font-size="18" fill="#222">View Borrowing History</text>
+<ellipse cx="400" cy="670" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="400" y="675" text-anchor="middle" font-size="18" fill="#222">Renew Loan</text>
+<ellipse cx="1100" cy="510" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="515" text-anchor="middle" font-size="18" fill="#222">Manage Books</text>
+<ellipse cx="750" cy="430" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="435" text-anchor="middle" font-size="18" fill="#222">Add Book</text>
+<ellipse cx="750" cy="510" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="515" text-anchor="middle" font-size="18" fill="#222">Update Book</text>
+<ellipse cx="750" cy="590" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="595" text-anchor="middle" font-size="18" fill="#222">Remove Book</text>
+<ellipse cx="1100" cy="190" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="195" text-anchor="middle" font-size="18" fill="#222">Manage Members</text>
+<ellipse cx="1100" cy="350" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="355" text-anchor="middle" font-size="18" fill="#222">Borrow Book</text>
+<ellipse cx="750" cy="190" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="188" text-anchor="middle" font-size="17" fill="#222">Verify Member</text>
+<text x="750" y="205" text-anchor="middle" font-size="17" fill="#222">Eligibility</text>
+<ellipse cx="750" cy="350" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="355" text-anchor="middle" font-size="18" fill="#222">Check Book Availability</text>
+<ellipse cx="1100" cy="670" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="675" text-anchor="middle" font-size="18" fill="#222">Return Book</text>
+<ellipse cx="750" cy="670" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="675" text-anchor="middle" font-size="18" fill="#222">Calculate Fine</text>
+<ellipse cx="750" cy="750" rx="128" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="748" text-anchor="middle" font-size="17" fill="#222">Notify Reservation</text>
+<text x="750" y="765" text-anchor="middle" font-size="17" fill="#222">Availability</text>
+<ellipse cx="1100" cy="750" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="755" text-anchor="middle" font-size="18" fill="#222">Record Fine Payment</text>
+<ellipse cx="1100" cy="830" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="835" text-anchor="middle" font-size="18" fill="#222">View Overdue Loans</text>
+<ellipse cx="750" cy="830" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="750" y="835" text-anchor="middle" font-size="18" fill="#222">Send Overdue Reminder</text>
+<ellipse cx="1100" cy="910" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="915" text-anchor="middle" font-size="18" fill="#222">Generate Reports</text>
+<ellipse cx="1100" cy="990" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="995" text-anchor="middle" font-size="18" fill="#222">Manage Staff Accounts</text>
+<ellipse cx="1100" cy="1070" rx="122" ry="30" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="1100" y="1075" text-anchor="middle" font-size="18" fill="#222">Configure Library Rules</text>
+<g stroke="#222" stroke-width="2" fill="#fff">
+  <circle cx="90" cy="398" r="11"/>
+  <line x1="90" y1="409" x2="90" y2="442"/>
+  <line x1="68" y1="418" x2="112" y2="418"/>
+  <line x1="90" y1="442" x2="74" y2="468"/>
+  <line x1="90" y1="442" x2="106" y2="468"/></g>
+<text x="90" y="490" text-anchor="middle" font-size="20" fill="#222">Member</text>
+<g stroke="#222" stroke-width="2" fill="#fff">
+  <circle cx="1410" cy="498" r="11"/>
+  <line x1="1410" y1="509" x2="1410" y2="542"/>
+  <line x1="1388" y1="518" x2="1432" y2="518"/>
+  <line x1="1410" y1="542" x2="1394" y2="568"/>
+  <line x1="1410" y1="542" x2="1426" y2="568"/></g>
+<text x="1410" y="590" text-anchor="middle" font-size="20" fill="#222">Librarian</text>
+<g stroke="#222" stroke-width="2" fill="#fff">
+  <circle cx="1410" cy="968" r="11"/>
+  <line x1="1410" y1="979" x2="1410" y2="1012"/>
+  <line x1="1388" y1="988" x2="1432" y2="988"/>
+  <line x1="1410" y1="1012" x2="1394" y2="1038"/>
+  <line x1="1410" y1="1012" x2="1426" y2="1038"/></g>
+<text x="1410" y="1060" text-anchor="middle" font-size="20" fill="#222">Administrator</text>
+<g stroke="#222" stroke-width="2" fill="#fff">
+  <circle cx="90" cy="778" r="11"/>
+  <line x1="90" y1="789" x2="90" y2="822"/>
+  <line x1="68" y1="798" x2="112" y2="798"/>
+  <line x1="90" y1="822" x2="74" y2="848"/>
+  <line x1="90" y1="822" x2="106" y2="848"/></g>
+<text x="90" y="870" text-anchor="middle" font-size="20" fill="#222">Email Service</text>
+<text x="90" y="888" text-anchor="middle" font-size="14" fill="#222">«external system»</text>
+</svg>

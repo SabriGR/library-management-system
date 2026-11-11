@@ -1,0 +1,21 @@
+@startuml
+!include style.puml
+!pragma layout smetana
+skinparam nodesep 70
+skinparam ranksep 90
+
+object ":Librarian" as L
+object ":LibraryController" as C
+object ":LibraryService" as S
+object ":UserRepository" as UR
+object ":BookRepository" as BR
+object ":BorrowingRecord\nRepository" as RR
+
+L --> C : 1: borrow(userId, bookId)
+C --> S : 1.1: borrowBook(userId, bookId)
+S --> UR : 1.1.1: findById(userId)
+S --> RR : 1.1.2: countActiveByUser(userId)
+S --> BR : 1.1.3: findById(bookId)
+S --> BR : 1.1.4: save(book)
+S --> RR : 1.1.5: save(record)
+@enduml

@@ -1,0 +1,61 @@
+@startuml
+!include style.puml
+skinparam ParticipantPadding 20
+hide footbox
+
+actor Librarian
+participant ":LibraryController" as C
+participant ":LibraryService" as S
+participant ":UserRepository" as UR
+participant ":BookRepository" as BR
+participant ":BorrowingRecord\nRepository" as RR
+
+Librarian -> C : borrow(userId, bookId)
+activate C
+C -> S : borrowBook(userId, bookId)
+activate S
+
+S -> UR : findById(userId)
+activate UR
+UR --> S : user
+deactivate UR
+
+alt user not found or inactive
+  S --> C : error (UserNotFound / UserInactive)
+  C --> Librarian : error message
+else user is active
+  S -> RR : countActiveByUser(userId)
+  activate RR
+  RR --> S : activeLoans
+  deactivate RR
+
+  alt loan limit reached
+    S --> C : error (LoanLimitReached)
+    C --> Librarian : error message
+  else limit not reached
+    S -> BR : findById(bookId)
+    activate BR
+    BR --> S : book
+    deactivate BR
+
+    alt book not found or no copies available
+      S --> C : error (BookNotFound / BookNotAvailable)
+      C --> Librarian : error message
+    else book is available
+      S -> S : book.decreaseCopies()
+      S -> BR : save(book)
+      activate BR
+      BR --> S : book
+      deactivate BR
+      S -> RR : save(record)
+      activate RR
+      RR --> S : record
+      deactivate RR
+      S --> C : record
+      C --> Librarian : loan confirmation (due date)
+    end
+  end
+end
+deactivate S
+deactivate C
+@enduml

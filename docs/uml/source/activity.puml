@@ -1,0 +1,41 @@
+@startuml
+!include style.puml
+skinparam swimlaneTitleFontStyle bold
+skinparam ActivityFontSize 14
+skinparam ArrowFontSize 13
+
+|Librarian|
+start
+:Enter member ID and book ID;
+|System|
+:Find member by ID;
+if (Member exists and is active?) then (yes)
+else (no)
+  :Show "Member not found
+or inactive";
+  end
+endif
+:Count member's active loans;
+if (Loan limit reached?) then (yes)
+  :Show "Loan limit reached";
+  end
+else (no)
+endif
+:Find book by ID;
+if (Book exists and\ncopies available?) then (yes)
+else (no)
+  :Show "Book not available";
+  |Librarian|
+  :Offer reservation to member;
+  end
+endif
+|System|
+:Decrease available copies by 1;
+:Create borrowing record
+(due date = today + 14 days);
+:Save book and record;
+:Show loan confirmation;
+|Librarian|
+:Give book to member;
+stop
+@enduml

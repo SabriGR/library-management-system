@@ -1,0 +1,25 @@
+@startuml
+!include style.puml
+!pragma layout smetana
+skinparam nodesep 30
+skinparam ranksep 40
+skinparam defaultFontSize 15
+
+rectangle "Client\nPostman, Swagger UI, any HTTP client" as client
+rectangle "Security filter\nHTTP Basic login, BCrypt passwords, role rules (Member, Librarian, Administrator)" as sec
+rectangle "Controller layer\nAuth, Book, Member, Library, Reservation, Fine, Report, Admin controllers\nValidation of requests, conversion to DTOs" as ctl
+rectangle "Service layer\nLibraryService, BookService, MemberService, ReservationService,\nFineService, NotificationService, RulesService, StaffService, ReportService, AuditService\nBusiness rules and transactions" as svc
+rectangle "Repository layer\nSpring Data JPA repositories" as repo
+rectangle "Entity layer\nUser, Member, Librarian, Administrator, Book, BorrowingRecord, Fine, Reservation, LibraryRules" as ent
+database "Database\nH2 (default) or MySQL" as db
+
+client --> sec : HTTP request
+sec --> ctl
+ctl --> svc
+svc --> repo
+repo --> ent
+ent --> db : Hibernate / JPA
+
+rectangle "Global exception handler\nJSON error body with code and message" as exh
+ctl .. exh
+@enduml

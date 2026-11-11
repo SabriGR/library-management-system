@@ -1,0 +1,21 @@
+@startuml
+!include style.puml
+!pragma layout smetana
+skinparam nodesep 60
+skinparam ranksep 70
+
+state "Active" as Active
+state "Overdue" as Overdue
+state "Returned" as Returned
+
+[*] --> Active : borrowBook()\n/ dueDate = today + 14 days
+Active --> Active : renewLoan()\n[renewalCount < 1 and no reservation]
+Active --> Overdue : [today > dueDate]
+Active --> Returned : returnBook()\n/ returnDate = today
+Overdue --> Returned : returnBook()\n/ calculateFine()
+Returned --> [*]
+
+Active : do / book copy is held by member
+Overdue : entry / record appears in overdue list
+Returned : entry / availableCopies + 1
+@enduml

@@ -1,0 +1,87 @@
+@startuml
+!include style.puml
+!pragma layout smetana
+skinparam nodesep 35
+skinparam ranksep 55
+
+class LibraryService <<service>> {
+  + borrowBook(userId, bookId) : BorrowingRecord
+  + returnBook(recordId) : BorrowingRecord
+  + renewLoan(recordId, memberId) : BorrowingRecord
+  + getActiveBorrowingsByUser(userId) : List
+  + getBorrowingHistory(userId) : List
+  + getOverdueBooks() : List
+}
+
+class ReservationService <<service>> {
+  + reserve(memberId, bookId) : Reservation
+  + cancel(reservationId, memberId) : Reservation
+  + findByMember(memberId) : List
+  + hasWaitingReservation(bookId) : boolean
+  + notifyNextWaiting(book) : Optional
+  + fulfillIfReady(memberId, bookId) : void
+}
+
+class FineService <<service>> {
+  + createFine(record, daysLate, rate) : Fine
+  + pay(fineId) : Fine
+  + findUnpaid(memberId) : List
+  + findByMember(memberId) : List
+  + totalUnpaid(memberId) : BigDecimal
+}
+
+class NotificationService <<service>> {
+  + sendEmail(to, subject, body) : void
+  + sendOverdueReminders() : int
+}
+
+class RulesService <<service>> {
+  + getRules() : LibraryRules
+  + update(request) : LibraryRules
+}
+
+class BookService <<service>> {
+  + search(keyword) : List
+  + get(id) : Book
+  + create(request) : Book
+  + update(id, request) : Book
+  + remove(id) : void
+}
+
+class MemberService <<service>> {
+  + register(request) : Member
+  + search(keyword) : List
+  + get(id) : Member
+  + update(id, request) : Member
+  + setActive(id, active) : Member
+  + details(id) : MemberDetailsResponse
+}
+
+class StaffService <<service>> {
+  + findAll() : List
+  + create(request) : Librarian
+  + setActive(id, active, requester) : Librarian
+}
+
+class ReportService <<service>> {
+  + mostBorrowedBooks(limit) : List
+  + memberActivity() : List
+}
+
+class AuditService <<service>> {
+  + log(action, details) : void
+}
+
+LibraryService ..> RulesService
+LibraryService ..> FineService
+LibraryService ..> ReservationService
+LibraryService ..> AuditService
+ReservationService ..> NotificationService
+ReservationService ..> AuditService
+FineService ..> AuditService
+BookService ..> AuditService
+MemberService ..> FineService
+MemberService ..> AuditService
+StaffService ..> AuditService
+RulesService ..> AuditService
+@enduml

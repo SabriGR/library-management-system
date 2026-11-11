@@ -1,0 +1,117 @@
+@startuml
+!include style.puml
+!pragma layout smetana
+skinparam nodesep 40
+skinparam ranksep 55
+
+abstract class User {
+  - id : Long
+  - firstName : String
+  - lastName : String
+  - email : String
+  - phoneNumber : String
+  - passwordHash : String
+  - active : boolean
+  + {abstract} getRole() : String
+  + getFullName() : String
+}
+
+class Member {
+  - membershipDate : LocalDate
+  + getRole() : String
+}
+
+class Librarian {
+  - employeeNo : String
+  + getRole() : String
+}
+
+class Administrator {
+  + getRole() : String
+}
+
+class Book {
+  - id : Long
+  - title : String
+  - author : String
+  - isbn : String
+  - category : String
+  - totalCopies : int
+  - availableCopies : int
+  - removed : boolean
+  - version : Long
+  + isAvailable() : boolean
+  + decreaseCopies() : void
+  + increaseCopies() : void
+}
+
+class BorrowingRecord {
+  - id : Long
+  - borrowDate : LocalDate
+  - dueDate : LocalDate
+  - returnDate : LocalDate
+  - renewalCount : int
+  + isReturned() : boolean
+  + isOverdue(today) : boolean
+  + markReturned(date) : void
+  + renew(days) : void
+  + daysLate(date) : long
+}
+
+class Fine {
+  - id : Long
+  - amount : BigDecimal
+  - paid : boolean
+  - paymentDate : LocalDate
+  + {static} calculateAmount(daysLate, rate) : BigDecimal
+  + pay(date) : void
+}
+
+class Reservation {
+  - id : Long
+  - reservationDate : LocalDate
+  - status : ReservationStatus
+  + isActive() : boolean
+  + cancel() : void
+  + markReady() : void
+  + fulfill() : void
+}
+
+enum ReservationStatus {
+  WAITING
+  READY
+  FULFILLED
+  CANCELLED
+}
+
+class LibraryRules {
+  - loanPeriodDays : int
+  - maxLoansPerMember : int
+  - maxRenewals : int
+  - finePerDay : BigDecimal
+}
+
+class Library <<conceptual>> {
+  - name : String
+  - address : String
+}
+
+User <|-- Member
+User <|-- Librarian
+Librarian <|-- Administrator
+
+Library o-- "0..*" Book
+Library o-- "0..*" Member
+
+Member "1" -- "0..*" BorrowingRecord : borrows
+Book "1" -- "0..*" BorrowingRecord : is borrowed in
+Member "1" -- "0..*" Reservation : makes
+Book "1" -- "0..*" Reservation : is reserved in
+BorrowingRecord "1" *-- "0..1" Fine : incurs
+Reservation ..> ReservationStatus
+
+note right of Library
+  Conceptual class: the system serves
+  one library, so it is not stored.
+end note
+@enduml

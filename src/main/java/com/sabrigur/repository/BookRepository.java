@@ -14,13 +14,26 @@ import java.util.Optional;
 public interface BookRepository extends JpaRepository<Book, Long> {
 
     Optional<Book> findByIsbn(String isbn);
-    
+
+    boolean existsByIsbn(String isbn);
+
+    Optional<Book> findByIdAndRemovedFalse(Long id);
+
     List<Book> findByAuthorContainingIgnoreCase(String author);
-    
+
     List<Book> findByTitleContainingIgnoreCase(String title);
-    
+
     List<Book> findByAvailableCopiesGreaterThan(int count);
 
     @Query("SELECT b FROM Book b WHERE LOWER(b.author) LIKE LOWER(CONCAT('%', :author, '%')) ORDER BY b.title ASC")
     List<Book> findBooksByAuthorSorted(@Param("author") String author);
+
+    /** Searches title, author, ISBN and category of all books that are not removed (FR-007). */
+    @Query("SELECT b FROM Book b WHERE b.removed = false AND (:keyword = '' "
+            + "OR LOWER(b.title) LIKE LOWER(CONCAT('%', :keyword, '%')) "
+            + "OR LOWER(b.author) LIKE LOWER(CONCAT('%', :keyword, '%')) "
+            + "OR LOWER(b.isbn) LIKE LOWER(CONCAT('%', :keyword, '%')) "
+            + "OR LOWER(COALESCE(b.category, '')) LIKE LOWER(CONCAT('%', :keyword, '%'))) "
+            + "ORDER BY b.title ASC")
+    List<Book> search(@Param("keyword") String keyword);
 }
